@@ -1,0 +1,1 @@
+export {setCityDetail} from "./citySlice"

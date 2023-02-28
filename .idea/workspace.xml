@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97f79f6f-38d6-4427-9b1c-c3de55f8dab1" name="Default Changelist" comment="" />
+    <list default="true" id="97f79f6f-38d6-4427-9b1c-c3de55f8dab1" name="Default Changelist" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/weather-app/src/app/WeatherFavoriteCityContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/app/WeatherOverview.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/app/WeatherRoutes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/AppHeader/AppHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/AppHeader/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherCitySelect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherFavoriteCity.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/redux/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/redux/services/WeatherRouteDefinitions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/redux/services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/redux/services/weather.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/redux/slices/citySlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/redux/slices/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/App.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +53,27 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NewCol/col_BE" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Work\Pavel\weatherApp\weather-app\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Work\Pavel\weatherApp\weather-app\src\pages" />
+      <recent name="C:\Work\Pavel\weatherApp\weather-app\src\app" />
+      <recent name="C:\Work\Pavel\weatherApp\weather-app\src\lib" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -40,11 +83,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677599884283</updated>
-      <workItem from="1677599885670" duration="847000" />
+      <workItem from="1677599885670" duration="21536000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1677601558177</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677601558178</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>

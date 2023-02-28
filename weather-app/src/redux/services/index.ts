@@ -1,0 +1,1 @@
+export {useGetCitiesQuery, useGetForecastQuery} from "./weather"

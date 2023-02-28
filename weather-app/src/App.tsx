@@ -1,10 +1,13 @@
-import React from 'react';
+import {store} from './redux/store';
+import {Provider} from 'react-redux'
+import {WeatherRoutes} from "./app/WeatherRoutes";
 
 function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+    return (
+        <Provider store={store}>
+            <WeatherRoutes/>
+        </Provider>
+    );
 }
 
 export default App;
