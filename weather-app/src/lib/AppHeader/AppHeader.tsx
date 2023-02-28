@@ -7,10 +7,10 @@ export const AppHeader = () => {
     const {push} = useHistory();
     return (
         <Box sx={{flexGrow: 1}}>
-            <AppBar position="static">
+            <AppBar sx={{backgroundColor: "black"}} position="static">
                 <Toolbar>
                     <Box style={{marginRight: "1rem"}}>
-                        <CloudOutlinedIcon/>
+                        <CloudOutlinedIcon style={{color:"#82EEFD"}}/>
                     </Box>
                     <Button onClick={() => push("/")} color="inherit">Select city</Button>
                     <Button onClick={() => push("/favorite")} color="inherit">Favorite City</Button>

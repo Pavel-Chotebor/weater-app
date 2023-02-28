@@ -11,12 +11,8 @@ export const WeatherCitySelect = () => {
     const [isAlertOpen, setIsAlertOpen] = useState(false)
     const [cityDetailObj, setCityDetailObj] = useState()
 
-    const {data} = useGetCitiesQuery(cityQuery)
+    const {data, isLoading} = useGetCitiesQuery(cityQuery, {skip: !cityQuery})
     const dispatch = useDispatch()
-
-   // let cityDetailObj: any = {}
-
-    console.log("cityDetailObj ",cityDetailObj)
 
     //saving forecast detail to redux
     const onDispatch = () => {
@@ -30,6 +26,7 @@ export const WeatherCitySelect = () => {
                 <Typography style={{marginBottom: "1rem"}} variant="h5">SELECT FAVORITE CITY</Typography>
                 <Autocomplete
                     id="city"
+                    loading={isLoading}
                     options={data || DEFAULT_DATA_VALUE}
                     getOptionLabel={(option: any) => option.LocalizedName}
                     onChange={(e, value) => setCityDetailObj(value)}
@@ -45,7 +42,7 @@ export const WeatherCitySelect = () => {
                     }
                 />
                 <Button
-                    style={{margin:"1rem"}}
+                    style={{margin: "1rem"}}
                     disabled={!cityDetailObj}
                     variant="contained"
                     onClick={onDispatch}
