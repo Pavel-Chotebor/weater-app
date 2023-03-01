@@ -1,6 +1,6 @@
 import {Autocomplete, Box, Button, Paper, Snackbar, TextField, Typography} from "@mui/material"
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import {useState} from "react";
+import {useDeferredValue, useState} from "react";
 import {useDispatch} from "react-redux";
 import {setCityDetail, useGetCitiesQuery} from "../../redux";
 
@@ -9,12 +9,17 @@ const DEFAULT_DATA_VALUE: any[] = []
 export const WeatherCitySelect = () => {
     const [cityQuery, setCityQuery] = useState("")
     const [isAlertOpen, setIsAlertOpen] = useState(false)
+
+    //todo: type
     const [cityDetailObj, setCityDetailObj] = useState()
 
-    const {data, isLoading} = useGetCitiesQuery(cityQuery, {skip: !cityQuery})
+    //debounce
+    const deferredValue = useDeferredValue(cityQuery)
+
+    const {data, isLoading} = useGetCitiesQuery(deferredValue, {skip: !deferredValue})
     const dispatch = useDispatch()
 
-    //saving forecast detail to redux
+    //saving city detail to redux
     const onDispatch = () => {
         dispatch(setCityDetail(cityDetailObj))
         setIsAlertOpen(true)
@@ -28,6 +33,7 @@ export const WeatherCitySelect = () => {
                     id="city"
                     loading={isLoading}
                     options={data || DEFAULT_DATA_VALUE}
+                    //todo: type
                     getOptionLabel={(option: any) => option.LocalizedName}
                     onChange={(e, value) => setCityDetailObj(value)}
                     sx={{width: 300}}
@@ -46,7 +52,8 @@ export const WeatherCitySelect = () => {
                     disabled={!cityDetailObj}
                     variant="contained"
                     onClick={onDispatch}
-                    endIcon={<FavoriteIcon/>}>
+                    endIcon={<FavoriteIcon/>}
+                >
                     Set favorite city
                 </Button>
                 <Snackbar

@@ -1,12 +1,21 @@
-import { useGetForecastQuery } from "../../redux"
+import {useGetForecastQuery} from "../../redux"
+import {Alert, CircularProgress} from "@mui/material";
 
 interface WeatherFavoriteCityProps {
-    cityId:string
+    cityId: string
 }
 
-export const WeatherFavoriteCity = ({cityId}:WeatherFavoriteCityProps) => {
-    const {data} = useGetForecastQuery(cityId)
+export const WeatherFavoriteCity = ({cityId}: WeatherFavoriteCityProps) => {
+    const {data, error, isLoading} = useGetForecastQuery(cityId)
 
-    return <></>
+    //in real case i would create some Loader, which takes data,isLoading,error and handle loading
+    return (
+        <>
+            {isLoading && <CircularProgress/>}
+            {!!data && "data"}
+            {!!error && <Alert variant="filled" severity="error">Error</Alert>}
+        </>
+    )
+
 
 }

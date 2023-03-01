@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97f79f6f-38d6-4427-9b1c-c3de55f8dab1" name="Default Changelist" comment="done with basic logic and layout">
+    <list default="true" id="97f79f6f-38d6-4427-9b1c-c3de55f8dab1" name="Default Changelist" comment="styling">
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/Aut.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather-app/src/lib/AppHeader/AppHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/lib/AppHeader/AppHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherCitySelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherCitySelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherFavoriteCity.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherFavoriteCity.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/redux/services/weather.ts" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/redux/services/weather.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677599884283</updated>
-      <workItem from="1677599885670" duration="23347000" />
+      <workItem from="1677599885670" duration="26036000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1677601558177</created>
@@ -81,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677626732657</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="styling">
+      <created>1677628373984</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677628373984</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="done with basic logic and layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with basic logic and layout" />
+    <MESSAGE value="styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling" />
   </component>
 </project>
