@@ -1,7 +1,9 @@
-import {useGetForecastQuery} from "../../redux"
-import {Alert, Box, CircularProgress, Typography} from "@mui/material";
+import {deleteCityDetail, useGetForecastQuery} from "../../redux"
+import {Alert, Box, Button, CircularProgress, Typography} from "@mui/material";
 import {City} from "../../models";
 import {getWeatherDetails} from "./weatherFavoriteCityHelper";
+import DeleteIcon from '@mui/icons-material/Delete';
+import {useDispatch} from "react-redux";
 
 interface WeatherFavoriteCityProps {
     cityDetail: City
@@ -9,6 +11,7 @@ interface WeatherFavoriteCityProps {
 
 export const WeatherFavoriteCity = ({cityDetail}: WeatherFavoriteCityProps) => {
     const {data, error, isLoading} = useGetForecastQuery(cityDetail.Key)
+    const dispatch = useDispatch()
 
     //in real project i would create Loader, which takes data, isLoading, error and handles loading
     return (
@@ -32,6 +35,14 @@ export const WeatherFavoriteCity = ({cityDetail}: WeatherFavoriteCityProps) => {
                 }
             )}
             {!!error && <Alert variant="filled" severity="error">Error</Alert>}
+            <Button
+                style={{margin: "1rem"}}
+                variant="contained"
+                onClick={() => dispatch(deleteCityDetail())}
+                endIcon={<DeleteIcon />}
+            >
+                delete city
+            </Button>
         </Box>
     )
 }

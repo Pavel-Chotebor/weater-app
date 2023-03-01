@@ -18,7 +18,7 @@ export const WeatherFavoriteCityContainer = () => {
                     }
                     <Button
                         style={{margin: "1rem"}}
-                        variant="contained"
+                        variant="outlined"
                         onClick={() => push(overview)}
                     >
                         GO TO SET FAVORITE

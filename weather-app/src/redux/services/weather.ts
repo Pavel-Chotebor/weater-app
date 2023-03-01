@@ -3,9 +3,8 @@ import {WeatherRouteDefinitions} from "./WeatherRouteDefinitions";
 import {City, WeatherForecast} from "../../models";
 
 //here only for task purpose
-const API_KEY = "apikey=x7UlGIjT2UF8DkzHM64KPLLX7HGUusiI"
+const API_KEY = "apikey=reu4w4I1PAsfaWpKokjkDOgDf2qnzig9"
 
-//todo tupe
 export const weatherApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: "http://dataservice.accuweather.com"}),
     endpoints: (builder) => ({

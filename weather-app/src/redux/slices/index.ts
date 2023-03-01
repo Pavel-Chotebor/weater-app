@@ -1,1 +1,1 @@
-export {setCityDetail} from "./citySlice"
+export {setCityDetail, deleteCityDetail} from "./citySlice"

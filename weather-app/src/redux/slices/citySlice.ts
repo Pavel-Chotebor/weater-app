@@ -16,11 +16,14 @@ export const citySlice = createSlice({
         setCityDetail: (state, action) => {
             state.cityDetail = action.payload
         },
+        deleteCityDetail: (state) => {
+            state.cityDetail = null
+        }
 
     }
 })
 
-export const {setCityDetail} = citySlice.actions
+export const {setCityDetail, deleteCityDetail} = citySlice.actions
 
 export const cityReducer = citySlice.reducer
 
