@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97f79f6f-38d6-4427-9b1c-c3de55f8dab1" name="Default Changelist" comment="styling">
-      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/Aut.tsx" afterDir="false" />
+    <list default="true" id="97f79f6f-38d6-4427-9b1c-c3de55f8dab1" name="Default Changelist" comment="refactoring">
+      <change afterPath="$PROJECT_DIR$/weather-app/src/app/routeDefinitions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/weatherFavoriteCityHelper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/context/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/context/weatherRoutesContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/hooks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/hooks/useDebounce.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/lib/hooks/useGetSelectedCity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/models/City.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/models/WeatherForecast.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather-app/src/models/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/app/WeatherFavoriteCityContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/app/WeatherFavoriteCityContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/app/WeatherOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/app/WeatherOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/app/WeatherRoutes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/app/WeatherRoutes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/lib/AppHeader/AppHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/lib/AppHeader/AppHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherCitySelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherCitySelect.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherFavoriteCity.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/lib/Weather/WeatherFavoriteCity.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/lib/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather-app/src/redux/services/weather.ts" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/redux/services/weather.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather-app/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather-app/src/redux/slices/citySlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/weather-app/src/redux/slices/citySlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +64,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677599884283</updated>
       <workItem from="1677599885670" duration="26036000" />
+      <workItem from="1677663912558" duration="10807000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1677601558177</created>
@@ -107,6 +126,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />

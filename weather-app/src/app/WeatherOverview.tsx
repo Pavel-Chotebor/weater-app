@@ -3,7 +3,7 @@ import {WeatherCitySelect} from "../lib";
 
 export const WeatherOverview = () => {
     return (
-        <Container style={{marginTop:"6rem"}} maxWidth="md">
+        <Container style={{marginTop: "6rem"}} maxWidth="md">
             <WeatherCitySelect/>
         </Container>
     )

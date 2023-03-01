@@ -1,15 +1,16 @@
 import {createSlice} from '@reduxjs/toolkit'
+import { City } from '../../models'
 
 export interface CitySlice {
-    cityDetail: any
+    cityDetail: City | null
 }
 
 const initialState: CitySlice = {
-    cityDetail: {}
+    cityDetail: null
 }
 
 export const citySlice = createSlice({
-    name: "counter",
+    name: "city",
     initialState: initialState,
     reducers: {
         setCityDetail: (state, action) => {

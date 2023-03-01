@@ -1,19 +1,29 @@
-import {useSelector} from "react-redux";
-import {RootState} from "../redux/store";
-import {WeatherFavoriteCity} from "../lib";
-import {Alert, Container, Paper} from "@mui/material";
+import {WeatherFavoriteCity, useGetSelectedCity, useWeatherRoutesContext} from "../lib";
+import {Alert, Box, Button, Container, Paper} from "@mui/material";
+import {useHistory} from "react-router";
 
 export const WeatherFavoriteCityContainer = () => {
-    const {selectedCity: {cityDetail}} = useSelector((state: RootState) => state)
+    const {cityDetail} = useGetSelectedCity()
+    const {push} = useHistory()
+    const {overview} = useWeatherRoutesContext()
 
     return (
         <Container maxWidth="md">
             <Paper style={{padding: "2rem", marginTop: "6rem"}}>
-                {!!cityDetail?.Key ?
-                    <WeatherFavoriteCity cityId={cityDetail?.Key}/>
-                    :
-                    <Alert variant="filled" severity="error">No favorite city set!</Alert>
-                }
+                <Box display="flex" flexDirection="column" alignItems="center">
+                    {!!cityDetail ?
+                        <WeatherFavoriteCity cityDetail={cityDetail}/>
+                        :
+                        <Alert variant="filled" severity="error">No favorite city set!</Alert>
+                    }
+                    <Button
+                        style={{margin: "1rem"}}
+                        variant="contained"
+                        onClick={() => push(overview)}
+                    >
+                        GO TO SET FAVORITE
+                    </Button>
+                </Box>
             </Paper>
         </Container>
     )
