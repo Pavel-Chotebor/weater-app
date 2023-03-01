@@ -4,7 +4,7 @@ import {useHistory} from "react-router";
 import {useWeatherRoutesContext} from "../context";
 
 
-export const AppHeader = () => {
+export const AppHeader = (): JSX.Element => {
     const {push} = useHistory();
     const {overview, favorite} = useWeatherRoutesContext()
 

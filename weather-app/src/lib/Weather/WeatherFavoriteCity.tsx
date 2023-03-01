@@ -9,7 +9,7 @@ interface WeatherFavoriteCityProps {
     cityDetail: City
 }
 
-export const WeatherFavoriteCity = ({cityDetail}: WeatherFavoriteCityProps) => {
+export const WeatherFavoriteCity = ({cityDetail}: WeatherFavoriteCityProps): JSX.Element => {
     const {data, error, isLoading} = useGetForecastQuery(cityDetail.Key)
     const dispatch = useDispatch()
 
@@ -39,7 +39,7 @@ export const WeatherFavoriteCity = ({cityDetail}: WeatherFavoriteCityProps) => {
                 style={{margin: "1rem"}}
                 variant="contained"
                 onClick={() => dispatch(deleteCityDetail())}
-                endIcon={<DeleteIcon />}
+                endIcon={<DeleteIcon/>}
             >
                 delete city
             </Button>

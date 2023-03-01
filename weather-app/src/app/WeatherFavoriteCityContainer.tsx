@@ -2,7 +2,7 @@ import {WeatherFavoriteCity, useGetSelectedCity, useWeatherRoutesContext} from "
 import {Alert, Box, Button, Container, Paper} from "@mui/material";
 import {useHistory} from "react-router";
 
-export const WeatherFavoriteCityContainer = () => {
+export const WeatherFavoriteCityContainer = (): JSX.Element => {
     const {cityDetail} = useGetSelectedCity()
     const {push} = useHistory()
     const {overview} = useWeatherRoutesContext()

@@ -1,3 +1,4 @@
+//capital letters are unfortunately from be model dto..
 interface TemperatureDetail {
     Value: string,
     Unit: string

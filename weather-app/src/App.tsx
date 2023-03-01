@@ -5,6 +5,7 @@ import {routeDefinitions} from "./app/routeDefinitions";
 import {weatherRoutesContext} from "./lib";
 
 function App() {
+        //for using urls through app and not importing to lib from app..
     const WeatherRoutesContextProvider = weatherRoutesContext.Provider
 
     return (

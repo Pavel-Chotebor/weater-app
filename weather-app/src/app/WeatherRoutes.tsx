@@ -7,7 +7,7 @@ import {routeDefinitions} from "./routeDefinitions";
 
 const history = createBrowserHistory();
 
-export const WeatherRoutes = () => {
+export const WeatherRoutes = (): JSX.Element => {
 
     return (
             <Router history={history}>

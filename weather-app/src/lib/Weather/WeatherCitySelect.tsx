@@ -8,7 +8,7 @@ import {useDebounce} from "../hooks/useDebounce";
 
 const DEFAULT_DATA_VALUE: any[] = []
 
-export const WeatherCitySelect = () => {
+export const WeatherCitySelect = (): JSX.Element => {
     const [cityQuery, setCityQuery] = useState("")
     const [isAlertOpen, setIsAlertOpen] = useState(false)
     const [cityDetailObj, setCityDetailObj] = useState<City | null>(null)
