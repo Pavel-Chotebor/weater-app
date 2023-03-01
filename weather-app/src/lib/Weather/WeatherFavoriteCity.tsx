@@ -7,9 +7,10 @@ import {useDispatch} from "react-redux";
 
 interface WeatherFavoriteCityProps {
     cityDetail: City
+    deleteButton?: boolean
 }
 
-export const WeatherFavoriteCity = ({cityDetail}: WeatherFavoriteCityProps): JSX.Element => {
+export const WeatherFavoriteCity = ({cityDetail, deleteButton = true}: WeatherFavoriteCityProps): JSX.Element => {
     const {data, error, isLoading} = useGetForecastQuery(cityDetail.Key)
     const dispatch = useDispatch()
 
@@ -34,15 +35,19 @@ export const WeatherFavoriteCity = ({cityDetail}: WeatherFavoriteCityProps): JSX
                     )
                 }
             )}
+
             {!!error && <Alert variant="filled" severity="error">Error</Alert>}
-            <Button
-                style={{margin: "1rem"}}
-                variant="contained"
-                onClick={() => dispatch(deleteCityDetail())}
-                endIcon={<DeleteIcon/>}
-            >
-                delete city
-            </Button>
+
+            {deleteButton && (
+                <Button
+                    style={{margin: "1rem"}}
+                    variant="contained"
+                    onClick={() => dispatch(deleteCityDetail())}
+                    endIcon={<DeleteIcon/>}
+                >
+                    delete city
+                </Button>
+            )}
         </Box>
     )
 }

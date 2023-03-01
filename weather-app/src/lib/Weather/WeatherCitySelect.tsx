@@ -5,6 +5,7 @@ import {useDispatch} from "react-redux";
 import {setCityDetail, useGetCitiesQuery} from "../../redux";
 import {City} from "../../models";
 import {useDebounce} from "../hooks/useDebounce";
+import {WeatherFavoriteCity} from "./WeatherFavoriteCity";
 
 const DEFAULT_DATA_VALUE: any[] = []
 
@@ -26,7 +27,7 @@ export const WeatherCitySelect = (): JSX.Element => {
     return (
         <Paper style={{padding: "4rem"}}>
             <Box display="flex" flexDirection="column" alignItems="center" alignContent="center">
-                <Typography style={{marginBottom: "1rem"}} variant="h5">SELECT FAVORITE CITY</Typography>
+                <Typography style={{marginBottom: "1rem"}} variant="h5">SELECT CITY</Typography>
                 <Autocomplete
                     id="city"
                     loading={isLoading}
@@ -54,6 +55,9 @@ export const WeatherCitySelect = (): JSX.Element => {
                 >
                     Set favorite city
                 </Button>
+
+                {!!cityDetailObj && <WeatherFavoriteCity deleteButton={false} cityDetail={cityDetailObj}/>}
+
                 <Snackbar
                     open={isAlertOpen}
                     onClose={() => setIsAlertOpen(false)}
