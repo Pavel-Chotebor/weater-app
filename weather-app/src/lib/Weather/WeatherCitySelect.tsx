@@ -25,7 +25,7 @@ export const WeatherCitySelect = (): JSX.Element => {
     }
 
     return (
-        <Paper style={{padding: "4rem"}}>
+        <Paper style={{padding: "4rem", borderRadius: 10}}>
             <Box display="flex" flexDirection="column" alignItems="center" alignContent="center">
                 <Typography style={{marginBottom: "1rem"}} variant="h5">SELECT CITY</Typography>
                 <Autocomplete
@@ -56,7 +56,13 @@ export const WeatherCitySelect = (): JSX.Element => {
                     Set favorite city
                 </Button>
 
-                {!!cityDetailObj && <WeatherFavoriteCity deleteButton={false} cityDetail={cityDetailObj}/>}
+                {!!cityDetailObj && (
+                    <Paper style={{padding: "2rem 10rem", borderRadius: 10, backgroundColor: "#FAFAFA"}}>
+                        <Box style={{marginTop: "2rem"}}>
+                            <WeatherFavoriteCity deleteButton={false} cityDetail={cityDetailObj}/>
+                        </Box>
+                    </Paper>
+                )}
 
                 <Snackbar
                     open={isAlertOpen}

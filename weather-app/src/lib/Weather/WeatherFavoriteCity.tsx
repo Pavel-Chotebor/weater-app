@@ -21,16 +21,18 @@ export const WeatherFavoriteCity = ({cityDetail, deleteButton = true}: WeatherFa
 
             {isLoading && <CircularProgress/>}
 
-            {!!data && data.DailyForecasts.map(({Temperature}) => {
-                    const {minTemperatureText, maxTemperatureText} = getWeatherDetails(Temperature)
+            {!!data && data.DailyForecasts.map(({Temperature, Day}) => {
+                    const {minTemperatureText, maxTemperatureText, Icon} = getWeatherDetails(Temperature, Day.Icon)
+
                     return (
-                        <Box
-                            key={Temperature.Minimum.Value}
+                        <Box display="flex" flexDirection="column" alignItems="center"
+                             key={Temperature.Minimum.Value}
                         >
                             <Typography
                                 variant="h5">{minTemperatureText}</Typography>
                             <Typography
                                 variant="h5">{maxTemperatureText}</Typography>
+                            <Icon height={64} width={64}/>
                         </Box>
                     )
                 }

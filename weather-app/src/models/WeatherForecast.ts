@@ -11,6 +11,7 @@ export interface Temperature {
 
 export interface WeatherForecastDetail {
     Temperature: Temperature
+    Day: { Icon: number }
 }
 
 export interface WeatherForecast {
